@@ -14,8 +14,8 @@ var Map = React.createClass({
     BenchStore.addChangeListener(this._onChange);
     this.renderMarkers();
     this.map.addListener('click', function(e) {
-      var clickedLat = e.latLng.J;
-      var clickedLng = e.latLng.M;
+      var clickedLat = e.latLng.lat();
+      var clickedLng = e.latLng.lng();
       var coords = {lat: clickedLat, lng: clickedLng};
       that.props.handleMapClick(coords);
     });
@@ -23,10 +23,10 @@ var Map = React.createClass({
 
   getMapBounds: function () {
     var bounds = this.map.getBounds();
-    var north = bounds.getNorthEast().J;
-    var south = bounds.getSouthWest().J;
-    var east = bounds.getNorthEast().M;
-    var west = bounds.getSouthWest().M;
+    var north = bounds.O.j;
+    var south = bounds.O.O;
+    var east = bounds.j.O;
+    var west = bounds.j.j;
     var limits = {boundaries: {north: north, south: south, east: east, west: west}};
     return limits;
   },
@@ -77,7 +77,7 @@ var Map = React.createClass({
       <div className='map' ref='map'>
         Map should be here.
 
-        
+
       </div>
     );
   }

@@ -4,7 +4,7 @@ var Search = React.createClass({
   },
 
   _onChange: function () {
-    
+
   },
 
   handleMapClick: function (coordinates) {
