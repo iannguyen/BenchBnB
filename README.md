@@ -7,7 +7,7 @@ BenchBnB is a side-project that integrates the GoogleMaps API, built on Rails an
 
 ### Setup
 
-Download the repo, navigate to the root app directory and run `bundle install`. Type `rails s` to start the server and open up your browser and type `localhost:3000`. 
+Download the repo, navigate to the root app directory and run `bundle install`. Type `rails s` to start the server and open up your browser and type `localhost:3000`.
 
 ### Features
 
@@ -18,6 +18,6 @@ Download the repo, navigate to the root app directory and run `bundle install`. 
 
 - Bring it to life
 - Apply `filters` for bench seating capacity
-- Add a `Bench` show page
+- Add a `Bench` show page and integrate image upload
 - Add `Reviews` for benches
 - Make it more prettiful.
