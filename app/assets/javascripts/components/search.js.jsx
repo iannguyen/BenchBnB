@@ -3,10 +3,6 @@ var Search = React.createClass({
     return { min: null, max: null };
   },
 
-  _onChange: function () {
-
-  },
-
   handleMapClick: function (coordinates) {
     this.props.history.pushState(null, "benches/new", coordinates);
   },

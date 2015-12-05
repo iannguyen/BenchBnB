@@ -38,6 +38,7 @@ var Map = React.createClass({
   _onChange: function () {
     this.state.markers.forEach(function(marker) {
       marker.setMap(null);
+      marker = null;
     });
     this.setState({markers: []});
     this.benches = BenchStore.all();
@@ -46,7 +47,6 @@ var Map = React.createClass({
 
   generateMapMarkers: function () {
     var that = this;
-    // console.log(this.benches);
     for (var i = 0; i < this.benches.length; i++) {
       var coordinates = new google.maps.LatLng(this.benches[i].lat, this.benches[i].lng);
       var marker = new google.maps.Marker({
@@ -76,8 +76,6 @@ var Map = React.createClass({
     return (
       <div className='map' ref='map'>
         Map should be here.
-
-
       </div>
     );
   }
