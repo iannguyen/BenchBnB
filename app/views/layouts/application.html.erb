@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>BenchBnB</title>
 
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBua1dfIL0qkNgxUcNYwqtv3eW_jDiK1fk"%>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
 </head>
-<body>
-<!-- Google Maps API -->
 
-<%= yield %>
+<body>
+  <!-- Google Maps API -->
+
+  <%= yield %>
 
 </body>
+
 </html>
