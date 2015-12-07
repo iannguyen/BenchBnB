@@ -1,38 +1,41 @@
-var Index = React.createClass({
-  getInitialState: function () {
-    return (
-      { benches: BenchStore.all() }
-    );
-  },
+(function(root) {
+  'use strict';
 
-  componentDidMount: function () {
-    BenchStore.addChangeListener(this._onChange);
-    ApiUtil.fetchBenches();
-  },
+  root.Index = React.createClass({
 
-  componentWillUnmount: function () {
-    BenchStore.removeChangeListener(this._onChange);
-  },
+    getInitialState: function() {
+      return ({benches: BenchStore.all()});
+    },
 
-  _onChange: function () {
-    this.setState({ benches: BenchStore.all() });
-  },
+    componentDidMount: function() {
+      BenchStore.addChangeListener(this._onChange);
+      ApiUtil.fetchBenches();
+    },
 
-  render: function () {
-    return (
-      <div className='description'>
-        <ul>
-        {
-          this.state.benches.map(function (bench){
-            return (
-              <div>
-                <li>-{ bench.description }-</li>
-              </div>
-            );
-          })
-        }
-        </ul>
-      </div>
-    );
-  }
-});
+    componentWillUnmount: function() {
+      BenchStore.removeChangeListener(this._onChange);
+    },
+
+    _onChange: function() {
+      this.setState({benches: BenchStore.all()});
+    },
+
+    render: function() {
+      return (
+        <div className='description'>
+          <ul>
+            {this.state.benches.map(function(bench) {
+              return (
+                <div>
+                  <li>-{bench.description}-</li>
+                </div>
+              );
+            })
+}
+          </ul>
+        </div>
+      );
+    }
+  });
+
+}(this));

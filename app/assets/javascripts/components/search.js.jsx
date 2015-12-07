@@ -1,18 +1,21 @@
-var Search = React.createClass({
-  getInitialState: function () {
-    return { min: null, max: null };
-  },
+(function(root) {
+  'use strict';
 
-  handleMapClick: function (coordinates) {
-    this.props.history.pushState(null, "benches/new", coordinates);
-  },
+  root.Search = React.createClass({
+    mixins: [ReactRouter.History],
 
-  render: function () {
-    return (
-      <div>
-        <Map handleMapClick={this.handleMapClick}/>
-        <Index />
-      </div>
-    );
-  }
-});
+    handleMapClick: function(coordinates) {
+      this.props.history.pushState(null, "/benches/new", coordinates);
+    },
+
+    render: function() {
+      return (
+        <div>
+          <Map handleMapClick={this.handleMapClick}/>
+          <Index/>
+        </div>
+      );
+    }
+  });
+
+}(this));
