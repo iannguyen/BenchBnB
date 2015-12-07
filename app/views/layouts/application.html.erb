@@ -8,12 +8,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body data-no-turbolink data-no-transition-cache>
+<body>
 <!-- Google Maps API -->
-
-<script type="text/javascript">
-  window.onunload = function(){};
-</script>
 
 <%= yield %>
 
