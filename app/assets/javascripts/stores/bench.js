@@ -5,12 +5,12 @@
   var CHANGE_EVENT = "CHANGE";
 
   var resetBenches = function (benches) {
-    _benches = benches;
+    _benches = benches.slice(0);
   };
 
   root.BenchStore = $.extend({}, EventEmitter.prototype, {
     all: function () {
-      return _benches.slice();
+      return _benches.slice(0);
     },
 
     changed: function() {

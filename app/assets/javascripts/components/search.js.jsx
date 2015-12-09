@@ -22,7 +22,7 @@
     },
 
     handleMapClick: function(coordinates) {
-      this.props.history.pushState(null, "/benches/new", coordinates);
+      this.props.history.pushState(null, "benches/new", coordinates);
     },
 
     render: function() {

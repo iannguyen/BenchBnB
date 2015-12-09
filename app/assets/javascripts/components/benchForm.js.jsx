@@ -1,61 +1,60 @@
-var BenchForm = React.createClass({
- mixins: [ReactRouter.History],
+(function(root) {
+  'use strict';
 
-  getInitialState: function() {
-    return {
-      description: '',
-      lat: this.props.location.query.lat,
-      lng: this.props.location.query.lng,
-      seating: ''
-    };
-  },
+  root.BenchForm = React.createClass({
+    mixins: [ReactRouter.History],
 
-  createBench: function (e) {
-    e.preventDefault();
-    var that = this;
-    var bench = {
-      lat: e.currentTarget.lat.value,
-      lng: e.currentTarget.lng.value,
-      seating: e.currentTarget.seating.value,
-      description: e.currentTarget.description.value
-    };
-    ApiUtil.createBench(bench);
-    this.props.history.pushState(null, "/");
-  },
+    getInitialState: function() {
+      return {description: '', lat: this.props.location.query.lat, lng: this.props.location.query.lng, seating: ''};
+    },
 
-  render: function () {
-    return (
-      <form className='bench' onSubmit={this.createBench}>
-        <div>
-          <label htmlFor='bench_lat'>Latitude:</label><br />
-          <input type="number" ref='lat' id="lat" defaultValue={this.state.lat}/>
-        </div>
+    createBench: function(e) {
+      e.preventDefault();
+      var bench = {
+        lat: e.currentTarget.lat.value,
+        lng: e.currentTarget.lng.value,
+        seating: e.currentTarget.seating.value,
+        description: e.currentTarget.description.value
+      };
+      ApiUtil.createBench(bench);
+      this.props.history.pushState(null, "/");
+    },
 
-        <br />
+    render: function() {
+      return (
+        <form className='bench' onSubmit={this.createBench}>
+          <div>
+            <label htmlFor='bench_lat'>Latitude:</label><br/>
+            <input type="number" ref='lat' id="lat" defaultValue={this.state.lat}/>
+          </div>
 
-        <div>
-          <label htmlFor='bench_lng'>Longitude:</label><br />
-          <input type="number" ref='lng' id="lng" defaultValue={this.state.lng}/>
-        </div>
+          <br/>
 
-        <br />
+          <div>
+            <label htmlFor='bench_lng'>Longitude:</label><br/>
+            <input type="number" ref='lng' id="lng" defaultValue={this.state.lng}/>
+          </div>
 
-        <div>
-          <label htmlFor='bench_seating'>Seating:</label><br />
-          <input type="number" ref='lng' id="seating"/>
-        </div>
+          <br/>
 
-        <br />
+          <div>
+            <label htmlFor='bench_seating'>Seating:</label><br/>
+            <input type="number" ref='seat' id="seating"/>
+          </div>
 
-        <div>
-          <label htmlFor='bench_description'>Description:</label><br />
-          <textarea ref='description' id='description'></textarea>
-        </div>
+          <br/>
 
-        <br />
+          <div>
+            <label htmlFor='bench_description'>Description:</label><br/>
+            <textarea ref='description' id='description'></textarea>
+          </div>
 
-        <button>Create Bench</button>
-      </form>
-    );
-  }
-});
+          <br/>
+
+          <button>Create Bench</button>
+        </form>
+      );
+    }
+  });
+
+}(this));
