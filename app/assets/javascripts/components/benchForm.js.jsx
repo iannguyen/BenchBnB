@@ -28,14 +28,14 @@ var BenchForm = React.createClass({
       <form className='bench' onSubmit={this.createBench}>
         <div>
           <label htmlFor='bench_lat'>Latitude:</label><br />
-          <input type="number" ref='lat' id="lat" value={this.state.lat}/>
+          <input type="number" ref='lat' id="lat" defaultValue={this.state.lat}/>
         </div>
 
         <br />
 
         <div>
           <label htmlFor='bench_lng'>Longitude:</label><br />
-          <input type="number" ref='lng' id="lng" value={this.state.lng}/>
+          <input type="number" ref='lng' id="lng" defaultValue={this.state.lng}/>
         </div>
 
         <br />
