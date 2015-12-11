@@ -17,42 +17,52 @@
         description: e.currentTarget.description.value
       };
       ApiUtil.createBench(bench);
-      this.props.history.pushState(null, "/");
     },
 
     render: function() {
       return (
-        <form className='bench' onSubmit={this.createBench}>
-          <div>
-            <label htmlFor='bench_lat'>Latitude:</label><br/>
-            <input type="number" ref='lat' id="lat" defaultValue={this.state.lat}/>
-          </div>
+        <div className="new-bench">
+          <h1 className="new-bench-header">Create A New Bench</h1>
 
           <br/>
-
-          <div>
-            <label htmlFor='bench_lng'>Longitude:</label><br/>
-            <input type="number" ref='lng' id="lng" defaultValue={this.state.lng}/>
-          </div>
-
           <br/>
 
-          <div>
-            <label htmlFor='bench_seating'>Seating:</label><br/>
-            <input type="number" ref='seat' id="seating"/>
-          </div>
+          <form className='bench' onSubmit={this.createBench}>
 
-          <br/>
+            <div className="latlng">
 
-          <div>
-            <label htmlFor='bench_description'>Description:</label><br/>
-            <textarea ref='description' id='description'></textarea>
-          </div>
+            <div>
+              <label htmlFor='bench_lat'>Latitude:&nbsp;&nbsp;
+              <input type="number" ref='lat' id="lat" value={this.state.lat}/>
+              </label>
+            </div>
 
-          <br/>
+            <div>
+              <label htmlFor='bench_lng'>Longitude:&nbsp;&nbsp;
+              <input type="number" ref='lng' id="lng" value={this.state.lng}/>
+              </label>
+            </div>
+            </div>
 
-          <button>Create Bench</button>
-        </form>
+            <br/>
+
+            <div>
+              <label htmlFor='bench_seating'>Seating:&nbsp;&nbsp;</label>
+              <input type="number" ref='seat' id="seating"/>
+            </div>
+
+            <br/>
+
+            <div>
+              <label htmlFor='bench_description'>Description:</label><br/>
+              <textarea ref='description' id='description'></textarea>
+            </div>
+
+            <br/>
+
+            <button className="create-button">Create Bench</button>
+          </form>
+        </div>
       );
     }
   });

@@ -8,16 +8,16 @@
         method: 'get',
         data: boundaries,
         datatype: 'json',
-        success: function (response) {
+        success: function(response) {
           ApiActions.receiveAll(response);
         }
       });
     },
 
-    fetchSingleBench: function (id) {
+    fetchSingleBench: function(id) {
       $.ajax({
         url: 'api/benches/' + id,
-        success: function (response) {
+        success: function(response) {
           ApiActions.receiveSingleBench(response);
         }
       });
@@ -27,10 +27,13 @@
       $.ajax({
         url: 'api/benches',
         method: 'post',
-        data: {bench: bench},
+        data: {
+          bench: bench
+        },
         datatype: 'json',
         success: function(response) {
           ApiActions.receiveSingleBench(response);
+          this.props.history.pushState(null, "/");
         }
       });
     }

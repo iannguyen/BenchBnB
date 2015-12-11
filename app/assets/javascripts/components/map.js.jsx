@@ -34,6 +34,22 @@
       });
     },
 
+    componentWillUnmount: function() {
+      BenchStore.removeChangeListener(this._onChange);
+    },
+
+    _onChange: function() {
+      this.state.markers.forEach(function(marker) {
+        marker.setMap(null);
+        marker = null;
+      });
+      this.setState({
+        markers: []
+      });
+      this.benches = BenchStore.all();
+      this.generateMapMarkers();
+    },
+
     getMapBounds: function() {
       var bounds = this.map.getBounds();
       var north = bounds.O.j;
@@ -51,22 +67,6 @@
       return limits;
     },
 
-    componentWillUnmount: function() {
-      BenchStore.removeChangeListener(this._onChange);
-    },
-
-    _onChange: function() {
-      this.state.markers.forEach(function(marker) {
-        marker.setMap(null);
-        marker = null;
-      });
-      this.setState({
-        markers: []
-      });
-      this.benches = BenchStore.all();
-      this.generateMapMarkers();
-    },
-
     generateMapMarkers: function() {
       var that = this;
       for (var i = 0; i < this.benches.length; i++) {
@@ -81,10 +81,9 @@
     },
 
     setMarkers: function() {
-      var that = this;
       this.state.markers.forEach(function(marker) {
-        marker.setMap(that.map);
-      });
+        marker.setMap(this.map);
+      }.bind(this));
     },
 
     renderMarkers: function() {

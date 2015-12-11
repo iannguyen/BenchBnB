@@ -19,21 +19,21 @@ body {
   height: 100vh;
   margin: auto;
   background-image: url('http://images.alphacoders.com/282/282163.jpg');
+  font-family: cursive;
 }
 
 .map {
   margin: 5% auto;
   width: 90%;
   height: 500px;
-  background-color: yellow;
+  background-color: #fdf6e3;
 }
 
 div header  {
   width: 100%;
   margin: auto;
   text-align: center;
-  background-color: ivory;
-  font-family: cursive;
+  background-color: #fdf6e3;
   font-size: 40px;
 }
 
@@ -45,15 +45,26 @@ div .description {
   margin: 0px auto;
   text-align: center;
   width: 100%;
-  font-family: cursive;
   font-size: 20px;
   border-radius: 5px;
-  background-color: ivory;
+  background-color: #fdf6e3;
 }
 
 li {
   margin: 5px;
   list-style-type: none;
+}
+
+div.new-bench {
+  text-align: center;
+  background-color: #fdf6e3;
+  width: 50%;
+  margin: 3% auto;
+  padding: 2%;
+}
+
+.new-bench-header {
+  font-size: 35px;
 }
 
 form.bench {
@@ -62,17 +73,42 @@ form.bench {
 }
 
 form.bench label, input {
-  font-size: 20px;
+  font-size: 18px;
   width: 30%;
+  height: 40px;
   text-align: center;
-  height: 50px;
+  margin: auto;
 }
 
-label {
-  color: ivory;
+form.bench input, textarea {
+  background-color: transparent;
+  border: none;
+}
+
+.latlng {
+  position: relative;
+  left: 1%;
+}
+
+#seating {
+  border-bottom: 1px solid grey;
 }
 
 textarea {
-  width: 50%;
+  width: 90%;
   height: 100px;
+  font-size: 18px;
+  font-family: cursive;
+  border-bottom: 1px solid grey;
+}
+
+button.create-button {
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  font-family :cursive;
+}
+
+button.create-button:hover{
+  font-weight: bold;
 }
