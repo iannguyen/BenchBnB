@@ -6,11 +6,16 @@
   var IndexRoute = ReactRouter.IndexRoute;
 
   var App = React.createClass({
+    navigateHome: function(e) {
+      e.preventDefault();
+      window.location = "/";
+    },
+    
     render: function() {
       return (
         <div>
           <header>
-            <h1>Bench BnB</h1>
+            <h1 onClick={this.navigateHome}>Bench BnB</h1>
           </header>
           {this.props.children}
         </div>
