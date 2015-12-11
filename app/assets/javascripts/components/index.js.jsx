@@ -6,6 +6,7 @@
     render: function() {
       return (
         <div className='bench-index'>
+          <Filters/>
           <ul>
             {this.props.benches.map(function(bench) {
               return (
