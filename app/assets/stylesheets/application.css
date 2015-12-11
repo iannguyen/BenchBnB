@@ -23,9 +23,24 @@ body {
 }
 
 .map {
+  position: relative;
+  float: left;
+  left: 4%;
   margin: 5% auto;
-  width: 90%;
+  width: 45%;
   height: 500px;
+  background-color: #fdf6e3;
+}
+
+div .description {
+  position: relative;
+  float: right;
+  right: 4%;
+  margin: 5% auto;
+  height: 500px;
+  width: 45%;
+  font-size: 20px;
+  border-radius: 5px;
   background-color: #fdf6e3;
 }
 
@@ -39,15 +54,6 @@ div header  {
 
 h1 {
   margin: 0px;
-}
-
-div .description {
-  margin: 0px auto;
-  text-align: center;
-  width: 100%;
-  font-size: 20px;
-  border-radius: 5px;
-  background-color: #fdf6e3;
 }
 
 li {
