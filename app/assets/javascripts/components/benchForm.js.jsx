@@ -30,25 +30,29 @@
           <form className='bench' onSubmit={this.createBench}>
 
             <div className="latlng">
+              <div>
+                <label htmlFor='bench_lat'>Latitude:</label>&nbsp;&nbsp;
+                <input type="number" ref='lat' id="lat" value={this.state.lat}/>
+              </div>
 
-            <div>
-              <label htmlFor='bench_lat'>Latitude:&nbsp;&nbsp;
-              <input type="number" ref='lat' id="lat" value={this.state.lat}/>
-              </label>
-            </div>
-
-            <div>
-              <label htmlFor='bench_lng'>Longitude:&nbsp;&nbsp;
-              <input type="number" ref='lng' id="lng" value={this.state.lng}/>
-              </label>
-            </div>
+              <div>
+                <label htmlFor='bench_lng'>Longitude:</label>&nbsp;&nbsp;
+                <input type="number" ref='lng' id="lng" value={this.state.lng}/>
+              </div>
             </div>
 
             <br/>
 
             <div>
-              <label htmlFor='bench_seating'>Seating:&nbsp;&nbsp;</label>
-              <input type="number" ref='seat' id="seating"/>
+              <label htmlFor='bench_seating'>Seating:</label>&nbsp;&nbsp;
+              <select id="seating" name="seating">
+                <option selected disabled hidden value=''></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
             </div>
 
             <br/>

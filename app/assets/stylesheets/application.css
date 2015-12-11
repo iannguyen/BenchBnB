@@ -78,6 +78,10 @@ form.bench {
   text-align: center;
 }
 
+label {
+  text-decoration: underline;
+}
+
 form.bench label, input {
   font-size: 18px;
   width: 30%;
@@ -97,7 +101,9 @@ form.bench input, textarea {
 }
 
 #seating {
-  border-bottom: 1px solid grey;
+  height: 25px;
+  background-color: transparent;
+  font-size: 16px;
 }
 
 textarea {
