@@ -33,7 +33,7 @@
         datatype: 'json',
         success: function(response) {
           ApiActions.receiveSingleBench(response);
-          this.props.history.pushState(null, "/");
+          window.location = "/";
         }
       });
     }
