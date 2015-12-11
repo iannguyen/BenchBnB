@@ -5,7 +5,7 @@
 
     render: function() {
       return (
-        <div className='description'>
+        <div className='bench-index'>
           <ul>
             {this.props.benches.map(function(bench) {
               return (

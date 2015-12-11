@@ -32,7 +32,7 @@ body {
   background-color: #fdf6e3;
 }
 
-div .description {
+div .bench-index {
   position: relative;
   float: right;
   right: 4%;
@@ -42,6 +42,7 @@ div .description {
   font-size: 20px;
   border-radius: 5px;
   background-color: #fdf6e3;
+  overflow-y: auto;
 }
 
 div header  {
@@ -80,6 +81,7 @@ form.bench {
 
 label {
   text-decoration: underline;
+  font-style: italic;
 }
 
 form.bench label, input {
