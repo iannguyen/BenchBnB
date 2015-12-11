@@ -10,7 +10,7 @@
             {this.props.benches.map(function(bench) {
               return (
                 <div>
-                  <li key={bench.id}>-{bench.description}-</li>
+                  <li key={bench.id}>-{bench.description}</li>
                 </div>
               );
             })
