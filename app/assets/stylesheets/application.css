@@ -19,9 +19,11 @@ body {
   height: 100vh;
   margin: auto;
   background-image: url('http://images.alphacoders.com/282/282163.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   font-family: cursive;
 }
-
 .map {
   position: relative;
   float: left;
@@ -31,7 +33,6 @@ body {
   height: 500px;
   background-color: #fdf6e3;
 }
-
 div .bench-index {
   position: relative;
   float: right;
@@ -40,50 +41,41 @@ div .bench-index {
   height: 500px;
   width: 45%;
   font-size: 20px;
-  border-radius: 5px;
-  background-color: #fdf6e3;
+  background-color: ivory;
   overflow-y: auto;
 }
-
-div header  {
+div header {
   width: 100%;
   margin: auto;
   text-align: center;
   background-color: #fdf6e3;
   font-size: 40px;
 }
-
 h1 {
   margin: 0px;
 }
-
 li {
   margin: 5px;
   list-style-type: none;
 }
-
 div.new-bench {
   text-align: center;
-  background-color: #fdf6e3;
+  background-color: ivory;
   width: 50%;
   margin: 3% auto;
   padding: 2%;
 }
-
 .new-bench-header {
   font-size: 35px;
 }
-
 form.bench {
   margin: auto;
   text-align: center;
 }
-
 label {
   text-decoration: underline;
   font-style: italic;
 }
-
 form.bench label, input {
   font-size: 18px;
   width: 30%;
@@ -91,23 +83,19 @@ form.bench label, input {
   text-align: center;
   margin: auto;
 }
-
 form.bench input, textarea {
   background-color: transparent;
   border: none;
 }
-
 .latlng {
   position: relative;
   left: 1%;
 }
-
 #seating {
   height: 25px;
   background-color: transparent;
   font-size: 16px;
 }
-
 textarea {
   width: 90%;
   height: 100px;
@@ -115,14 +103,13 @@ textarea {
   font-family: cursive;
   border-bottom: 1px solid grey;
 }
-
 button.create-button {
   font-size: 18px;
   background-color: transparent;
   border: none;
-  font-family :cursive;
+  font-family: cursive;
 }
-
-button.create-button:hover{
+button.create-button:hover {
   font-weight: bold;
+  text-decoration: underline;
 }
