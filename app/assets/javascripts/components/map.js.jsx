@@ -11,7 +11,6 @@
     },
 
     componentDidMount: function() {
-      var that = this;
       var map = React.findDOMNode(this.refs.map);
       var mapOptions = {
         center: {
@@ -30,8 +29,8 @@
           lat: clickedLat,
           lng: clickedLng
         };
-        that.props.handleMapClick(coords);
-      });
+        this.props.handleMapClick(coords);
+      }.bind(this));
     },
 
     componentWillUnmount: function() {
@@ -68,7 +67,6 @@
     },
 
     generateMapMarkers: function() {
-      var that = this;
       for (var i = 0; i < this.benches.length; i++) {
         var coordinates = new google.maps.LatLng(this.benches[i].lat, this.benches[i].lng);
         var marker = new google.maps.Marker({
