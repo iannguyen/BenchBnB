@@ -11,30 +11,14 @@
     },
 
     componentDidMount: function() {
-      var map = React.findDOMNode(this.refs.map);
-      var mapOptions = {
-        center: {
-          lat: 37.7758,
-          lng: -122.435
-        },
-        zoom: 13
-      };
-      this.map = new google.maps.Map(map, mapOptions);
+      this.generateMap();
       BenchStore.addChangeListener(this._onChange);
-      this.renderMarkers();
-      this.map.addListener('click', function(e) {
-        var clickedLat = e.latLng.lat();
-        var clickedLng = e.latLng.lng();
-        var coords = {
-          lat: clickedLat,
-          lng: clickedLng
-        };
-        this.props.handleMapClick(coords);
-      }.bind(this));
+      FilterStore.addChangeListener(this._onChange);
     },
 
     componentWillUnmount: function() {
       BenchStore.removeChangeListener(this._onChange);
+      FilterStore.removeChangeListener(this._onChange);
     },
 
     _onChange: function() {
@@ -47,6 +31,28 @@
       });
       this.benches = BenchStore.all();
       this.generateMapMarkers();
+    },
+
+    generateMap: function() {
+      var map = React.findDOMNode(this.refs.map);
+      var mapOptions = {
+        center: {
+          lat: 37.7758,
+          lng: -122.435
+        },
+        zoom: 13
+      };
+      this.map = new google.maps.Map(map, mapOptions);
+      this.renderMarkers();
+      this.map.addListener('click', function(e) {
+        var clickedLat = e.latLng.lat();
+        var clickedLng = e.latLng.lng();
+        var coords = {
+          lat: clickedLat,
+          lng: clickedLng
+        };
+        this.props.handleMapClick(coords);
+      }.bind(this));
     },
 
     getMapBounds: function() {

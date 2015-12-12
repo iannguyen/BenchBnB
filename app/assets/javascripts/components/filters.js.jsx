@@ -4,7 +4,6 @@
   var defaultFilters = { min: 1, max: 5 };
 
   root.Filters = React.createClass({
-    mixins: [React.addons.LinkedStateMixin, ReactRouter.History],
 
     getInitialState: function() {
       return (defaultFilters);
