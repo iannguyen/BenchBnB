@@ -12,7 +12,7 @@
     _filters = filters;
   };
 
-  root.FiltersStore = $.extend({}, EventEmitter.prototype, {
+  root.FilterStore = $.extend({}, EventEmitter.prototype, {
     all: function () {
       return _filters.slice();
     },
@@ -32,8 +32,8 @@
     dispatcherID: AppDispatcher.register(function(payload) {
       switch (payload.actionType){
         case (BenchConstants.FILTERS_RECEIVED):
-          FiltersStore.resetFilters(payload.filters);
-          FiltersStore.changed();
+          FilterStore.resetFilters(payload.filters);
+          FilterStore.changed();
           break;
       }
     })

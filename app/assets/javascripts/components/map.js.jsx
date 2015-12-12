@@ -29,7 +29,7 @@
       this.setState({
         markers: []
       });
-      this.benches = BenchStore.all();
+      // this.props.benches = BenchStore.all();
       this.generateMapMarkers();
     },
 
@@ -73,11 +73,11 @@
     },
 
     generateMapMarkers: function() {
-      for (var i = 0; i < this.benches.length; i++) {
-        var coordinates = new google.maps.LatLng(this.benches[i].lat, this.benches[i].lng);
+      for (var i = 0; i < this.props.benches.length; i++) {
+        var coordinates = new google.maps.LatLng(this.props.benches[i].lat, this.props.benches[i].lng);
         var marker = new google.maps.Marker({
           position: coordinates,
-          title: this.benches[i].description
+          title: this.props.benches[i].description
         });
         this.state.markers.push(marker);
       }
