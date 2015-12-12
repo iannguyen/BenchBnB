@@ -14,24 +14,24 @@
     componentDidMount: function() {
       this.generateMap();
       BenchStore.addChangeListener(this._onChange);
-      FilterStore.addChangeListener(this._onChange);
+      // FilterStore.addChangeListener(this._onChange);
     },
 
     componentWillUnmount: function() {
       BenchStore.removeChangeListener(this._onChange);
-      FilterStore.removeChangeListener(this._onChange);
+      // FilterStore.removeChangeListener(this._onChange);
     },
 
     _onChange: function() {
+      var newBenches = BenchStore.all();
       this.state.markers.forEach(function(marker) {
         marker.setMap(null);
         marker = null;
       });
-      this.setState({
-        markers: [],
-        benches: BenchStore.all()
-      });
-      this.generateMapMarkers();
+      this.setState(
+        {markers: [], benches: newBenches}, function() {
+        this.generateMapMarkers();
+      }.bind(this));
     },
 
     generateMap: function() {

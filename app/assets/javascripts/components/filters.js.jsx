@@ -12,19 +12,20 @@
     updateMin: function(e) {
       e.preventDefault();
       var newMin = parseInt(e.target.value);
-      this.setState({min: newMin});
-      console.log("updateMin");
-      console.log(this.state);
+      this.setState({min: newMin}, function() {
+        FilterActions.updateFilters({min: newMin, max: this.state.max});
+      }.bind(this));
     },
 
     updateMax: function(e) {
       e.preventDefault();
       var newMax = parseInt(e.target.value);
-      this.setState({max: newMax});
+      this.setState({max: newMax}, function() {
+        FilterActions.updateFilters({min: this.state.min, max: newMax});
+      }.bind(this));
     },
 
     render: function() {
-      console.log(this.state);
       return(
         <div className="filters">
           <label id="min-seats">Minimum Seats:</label>&nbsp;&nbsp;
