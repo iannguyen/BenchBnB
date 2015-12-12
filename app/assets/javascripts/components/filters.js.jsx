@@ -13,6 +13,8 @@
       e.preventDefault();
       var newMin = parseInt(e.target.value);
       this.setState({min: newMin});
+      console.log("updateMin");
+      console.log(this.state);
     },
 
     updateMax: function(e) {

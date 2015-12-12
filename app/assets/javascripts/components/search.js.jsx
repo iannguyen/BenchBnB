@@ -29,7 +29,7 @@
       return (
         <div>
           <Map handleMapClick={this.handleMapClick}
-               benches={this.state.benches}/>
+               initialBenches={this.state.benches}/>
           <Index benches={this.state.benches}/>
         </div>
       );

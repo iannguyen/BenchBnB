@@ -6,7 +6,8 @@
     getInitialState: function() {
       return {
         markers: [],
-        filters: []
+        filters: [],
+        benches: this.props.initialBenches
       };
     },
 
@@ -27,9 +28,9 @@
         marker = null;
       });
       this.setState({
-        markers: []
+        markers: [],
+        benches: BenchStore.all()
       });
-      // this.props.benches = BenchStore.all();
       this.generateMapMarkers();
     },
 
@@ -73,11 +74,11 @@
     },
 
     generateMapMarkers: function() {
-      for (var i = 0; i < this.props.benches.length; i++) {
-        var coordinates = new google.maps.LatLng(this.props.benches[i].lat, this.props.benches[i].lng);
+      for (var i = 0; i < this.state.benches.length; i++) {
+        var coordinates = new google.maps.LatLng(this.state.benches[i].lat, this.state.benches[i].lng);
         var marker = new google.maps.Marker({
           position: coordinates,
-          title: this.props.benches[i].description
+          title: this.state.benches[i].description
         });
         this.state.markers.push(marker);
       }
