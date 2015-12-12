@@ -42,8 +42,8 @@
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
-          </select>&nbsp;&nbsp;&nbsp;
-
+          </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
           <label id="max-seats">Maximum Seats:</label>&nbsp;&nbsp;
           <select id="max" name="max" onChange={this.updateMax} defaultValue="5">
             <option value="1">1</option>
