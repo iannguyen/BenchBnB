@@ -2,10 +2,14 @@
   'use strict';
 
   var _benches = [];
-  var _filters = {min: 1, max: 5};
+  var _filters = {
+    min: 1,
+    max: 5
+  };
+
   var CHANGE_EVENT = "CHANGE";
 
-  var resetBenches = function (benches) {
+  var resetBenches = function(benches) {
     _benches = benches.slice(0);
   };
 
@@ -14,7 +18,7 @@
   };
 
   root.BenchStore = $.extend({}, EventEmitter.prototype, {
-    all: function () {
+    all: function() {
       return this.filterBenches();
     },
 
@@ -39,7 +43,7 @@
     },
 
     dispatcherID: AppDispatcher.register(function(payload) {
-      switch (payload.actionType){
+      switch (payload.actionType) {
         case BenchConstants.BENCHES_RECEIVED:
           resetBenches(payload.benches);
           BenchStore.changed();

@@ -28,8 +28,7 @@
     render: function() {
       return (
         <div>
-          <Map handleMapClick={this.handleMapClick}
-               initialBenches={this.state.benches}/>
+          <Map handleMapClick={this.handleMapClick}   initialBenches={this.state.benches}/>
           <Index benches={this.state.benches}/>
         </div>
       );
