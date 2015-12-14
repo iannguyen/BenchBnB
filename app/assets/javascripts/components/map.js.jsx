@@ -2,6 +2,7 @@
   'use strict';
 
   root.Map = React.createClass({
+    mixins: [ReactRouter.History],
 
     getInitialState: function() {
       return {
@@ -92,6 +93,7 @@
         var marker = new google.maps.Marker({
           position: coordinates,
           title: this.state.benches[i].description,
+          bench: this.state.benches[i]
         });
         this.state.markers.push(marker);
       }
@@ -101,6 +103,13 @@
     setMarkers: function() {
       this.state.markers.forEach(function(marker) {
         marker.setMap(this.map);
+        var coordinates = {
+          lat: marker.bench.lat,
+          lng: marker.bench.lng
+        };
+        marker.addListener('click', function() {
+          this.history.pushState(null, "benches/" + marker.bench.id, coordinates);
+        }.bind(this));
       }.bind(this));
     },
 

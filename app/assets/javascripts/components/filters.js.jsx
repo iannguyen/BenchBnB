@@ -12,6 +12,14 @@
       return (defaultFilters);
     },
 
+    componentDidMount: function() {
+      this.clearFilters();
+    },
+
+    clearFilters: function() {
+      FilterActions.updateFilters(defaultFilters);
+    },
+
     updateMin: function(e) {
       e.preventDefault();
       var newMin = parseInt(e.target.value);
@@ -43,7 +51,7 @@
             <option value="4">4</option>
             <option value="5">5</option>
           </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          
+
           <label id="max-seats">Maximum Seats:</label>&nbsp;&nbsp;
           <select id="max" name="max" onChange={this.updateMax} defaultValue="5">
             <option value="1">1</option>

@@ -11,7 +11,6 @@
         lng: this.props.bench.lng
       };
       this.history.pushState(null, "/benches/" + this.props.bench.id, coords);
-      // this.map.panTo(latLng);
     },
 
     render: function() {

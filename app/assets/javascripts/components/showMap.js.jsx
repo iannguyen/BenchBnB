@@ -20,7 +20,7 @@
           lat: parseFloat(this.props.location.query.lat),
           lng: parseFloat(this.props.location.query.lng)
         },
-        zoom: 13
+        zoom: 15
       };
       this.map = new google.maps.Map(map, mapOptions);
       this.renderMarker(mapOptions.center);
@@ -29,7 +29,9 @@
     renderMarker: function(coordinates) {
       var marker = new google.maps.Marker({
         position: coordinates,
+        animation: google.maps.Animation.DROP
       });
+
       marker.setMap(this.map);
     },
 
