@@ -106,7 +106,7 @@ select {
 }
 textarea {
   width: 90%;
-  height: 100px;
+  height: 30px;
   font-size: 18px;
   font-family: cursive;
   border-bottom: 1px solid grey;

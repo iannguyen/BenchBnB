@@ -7,7 +7,8 @@
       return {
         markers: [],
         filters: [],
-        benches: this.props.initialBenches
+        benches: this.props.initialBenches,
+        bounds: this.getMapBounds
       };
     },
 
@@ -29,7 +30,7 @@
       this.setState({
         markers: [],
         benches: newBenches
-        }, function() {
+      }, function() {
         this.generateMapMarkers();
       }.bind(this));
     },
@@ -73,12 +74,24 @@
       return limits;
     },
 
+    isInBounds: function(coordinates) {
+      var bounds = this.map.getBounds();
+      var north = bounds.O.j;
+      var south = bounds.O.O;
+      var east = bounds.j.O;
+      var west = bounds.j.j;
+      var markerLat = coordinates.lat();
+      var markerLng = coordinates.lng();
+      return (markerLat <= north && markerLat >= south && markerLng <= east && markerLng >= west);
+    },
+
     generateMapMarkers: function() {
+      var that = this;
       for (var i = 0; i < this.state.benches.length; i++) {
         var coordinates = new google.maps.LatLng(this.state.benches[i].lat, this.state.benches[i].lng);
         var marker = new google.maps.Marker({
           position: coordinates,
-          title: this.state.benches[i].description
+          title: this.state.benches[i].description,
         });
         this.state.markers.push(marker);
       }

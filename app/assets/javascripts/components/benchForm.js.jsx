@@ -58,7 +58,7 @@
             <br/>
 
             <div>
-              <label htmlFor='bench_description'>Description:</label><br/>
+              <label htmlFor='bench_description'>Description:</label><br/><br/>
               <textarea ref='description' id='description'></textarea>
             </div>
 

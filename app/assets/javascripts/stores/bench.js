@@ -10,7 +10,7 @@
   var CHANGE_EVENT = "CHANGE";
 
   var resetBenches = function(benches) {
-    _benches = benches.slice(0);
+    _benches = benches.slice();
   };
 
   var resetFilters = function(filters) {
