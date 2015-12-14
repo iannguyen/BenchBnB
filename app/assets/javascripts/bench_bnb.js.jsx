@@ -10,7 +10,7 @@
       e.preventDefault();
       window.location = "/";
     },
-    
+
     render: function() {
       return (
         <div>
@@ -27,6 +27,7 @@
     <Route path="/" component={App}>
       <IndexRoute component={Search}/>
       <Route path='benches/new' component={BenchForm}/>
+      <Route path='benches/:benchId' component={BenchShow}/>
     </Route>
   );
 

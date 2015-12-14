@@ -11,7 +11,7 @@
             {this.props.benches.map(function(bench) {
               return (
                 <div>
-                  <li key={bench.id}>-{bench.description}</li>
+                  <IndexItem key={bench.id} bench={bench}/>
                 </div>
               );
             })
