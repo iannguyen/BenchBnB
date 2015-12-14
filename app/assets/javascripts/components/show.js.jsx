@@ -5,7 +5,7 @@
     render: function() {
       return(
         <div className="bench-show">
-
+          BENCH SHOW PAGE
         </div>
       );
     }
