@@ -23,10 +23,8 @@
     },
 
     find: function(id) {
-      var found;
       for (var i = 0; i < _benches.length; i++) {
         if (_benches[i].id === id) {
-          found = true;
           return _benches[i];
         }
       }
