@@ -12,6 +12,15 @@ class Api::BenchesController < ApplicationController
     end
   end
 
+  def show
+    bench = Bench.find(params[:id])
+    if bench
+      render json: bench
+    else
+      render json: bench.errors.full_messages, status: 422
+    end
+  end
+
   private
 
   def bench_params

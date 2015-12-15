@@ -14,6 +14,17 @@
       });
     },
 
+    fetchSingleBench: function(id) {
+      $.ajax({
+        url: 'api/benches/' + id,
+        method: 'get',
+        datatype: 'json',
+        success: function(response) {
+          ApiActions.receiveSingleBench(response);
+        }
+      });
+    },
+
     createBench: function(bench) {
       $.ajax({
         url: 'api/benches',
