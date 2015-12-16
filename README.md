@@ -4,7 +4,7 @@
 [site]: http://www.bench-bnb.herokuapp.com/
 
 ![screenshot]
-[screenshot]: ./images/benchbnb.gif
+[screenshot]: ./images/bench_bnb.gif
 
 BenchBnB is a side-project that integrates the GoogleMaps API, built on Rails and FLUX/React.js.
 
