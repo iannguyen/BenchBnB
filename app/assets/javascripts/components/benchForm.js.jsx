@@ -14,7 +14,8 @@
         lat: e.currentTarget.lat.value,
         lng: e.currentTarget.lng.value,
         seating: e.currentTarget.seating.value,
-        description: e.currentTarget.description.value
+        description: e.currentTarget.description.value,
+        image_url: e.currentTarget.image_url.value
       };
       ApiUtil.createBench(bench);
     },
@@ -66,7 +67,7 @@
 
             <div>
               <label htmlFor='bench_imageurl'>Image URL(optional):</label><br/><br/>
-              <textarea ref='url' id='url'></textarea>
+              <textarea ref='image_url' id='image_url'></textarea>
             </div>
 
             <br/>

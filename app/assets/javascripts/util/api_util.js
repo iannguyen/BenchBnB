@@ -34,6 +34,7 @@
         },
         datatype: 'json',
         success: function(response) {
+          debugger;
           ApiActions.receiveSingleBench(response);
           window.location = "/";
         }
