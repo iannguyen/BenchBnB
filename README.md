@@ -1,7 +1,7 @@
 # BenchBnB
 
 [Live][site]
-[site]: http://www.bench-bnb.herokuapp.com/
+[site]: http://bench-bnb.herokuapp.com/
 
 ![screenshot]
 [screenshot]: ./images/bench_bnb.gif
