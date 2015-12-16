@@ -30,6 +30,7 @@
         <div>
           <Map handleMapClick={this.handleMapClick}   initialBenches={this.state.benches}/>
           <Index benches={this.state.benches}/>
+          <Guide/>
         </div>
       );
     }
