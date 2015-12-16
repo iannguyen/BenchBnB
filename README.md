@@ -16,8 +16,7 @@ Download the repo, navigate to the root app directory and run `bundle install`. 
 
 ### ToDo
 
-- Bring it to life
-- Apply `filters` for bench seating capacity
-- Add a `Bench` show page and integrate image upload
+[x] Bring it to life
+[x] Apply `filters` for bench seating capacity
+[x] Add a `Bench` show page and integrate image upload
 - Add `Reviews` for benches
-- Make it more prettiful.
