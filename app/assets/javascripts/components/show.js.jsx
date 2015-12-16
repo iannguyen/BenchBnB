@@ -27,9 +27,16 @@
     },
 
     render: function() {
+      var bench = this.state.bench;
       return (
         <div className="bench-index">
-          {this.state.bench.description}
+          <ul className="bench-info">
+            <li>{bench.image_url}</li>
+            <li><strong>Latitude</strong>: {bench.lat}</li>
+            <li><strong>Longitude</strong>: {bench.lng}</li>
+            <li><strong>Seating Capacity</strong>: {bench.seating}</li>
+            <li><strong>Description</strong>: {bench.description}</li>
+          </ul>
         </div>
       );
     }
