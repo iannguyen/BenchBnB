@@ -63,6 +63,7 @@
             </div>
 
             <br/>
+            <br/>
 
             <button className="create-button">Create Bench</button>
           </form>
