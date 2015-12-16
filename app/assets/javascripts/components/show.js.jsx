@@ -30,16 +30,16 @@
       var bench = this.state.bench;
       return (
         <div className="bench-index">
+          <img className="large" src={bench.image_url}/>
           <ul className="bench-info">
-            <li>{bench.image_url}</li>
             <li><strong>Latitude</strong>: {bench.lat}</li>
             <li><strong>Longitude</strong>: {bench.lng}</li>
             <li><strong>Seating Capacity</strong>: {bench.seating}</li>
             <li><strong>Description</strong>: {bench.description}</li>
-            <ul className="reviews">
-              <h3>Reviews</h3>
-              <li>Reviews feature coming soon!</li>
-            </ul>
+          </ul>
+          <ul className="reviews">
+            <h3>Reviews</h3>
+            <li>Reviews feature coming soon!</li>
           </ul>
         </div>
       );

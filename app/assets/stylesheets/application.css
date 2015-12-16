@@ -31,6 +31,7 @@ div header {
   text-align: center;
   background-color: #fdf6e3;
   font-size: 40px;
+    border: 5px ridge wheat;
 }
 div header h1 {
   width: 35%;
@@ -48,6 +49,7 @@ div header h1:hover{
   width: 45%;
   height: 500px;
   background-color: #ffe9b6;
+    border: 5px ridge wheat;
 }
 div .bench-index {
   position: relative;
@@ -59,6 +61,7 @@ div .bench-index {
   font-size: 20px;
   background-color: #ffedc3;
   overflow-y: auto;
+    border: 5px ridge wheat;
 }
 h1 {
   margin: 0px;
@@ -125,6 +128,7 @@ button.create-button:hover {
 .filters {
   text-align: center;
   background-color: wheat;
+    border-bottom: 3px ridge wheat;
 }
 
 .guide {
@@ -132,6 +136,7 @@ button.create-button:hover {
   margin: auto;
   width: 92%;
   background-color: #fdf6e3;
+    border: 5px ridge wheat;
 }
 
 .guide h1 {
@@ -142,4 +147,42 @@ button.create-button:hover {
   margin: 0px;
   font-size: 18px;
   padding: 1%;
+}
+img.thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  float: left;
+}
+img.large {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  float: left;
+  margin: 1%;
+  border: 5px ridge wheat;
+}
+ul.index-item {
+  position: relative;
+  height: 100px;
+  width: 65%;
+  margin: auto;
+  border-top: 1px solid gold;
+  border-bottom: 1px solid gold;
+}
+ul.index-item:hover {
+  background-color: wheat;
+}
+ul.bench-info {
+  position: relative;
+  width: 85%;
+  left: 5%;
+  height: 300px;
+  text-align: left;
+  top: 5%;
+}
+ul.bench-info li {
+  width: 90%;
 }

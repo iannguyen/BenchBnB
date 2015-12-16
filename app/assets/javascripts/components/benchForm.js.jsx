@@ -44,7 +44,7 @@
             <br/>
 
             <div>
-              <label htmlFor='bench_seating'>Seating:</label>&nbsp;&nbsp;
+              <label htmlFor='bench_seating'>Seating (required):</label>&nbsp;&nbsp;
               <select id="seating" name="seating">
                 <option selected disabled hidden value=''></option>
                 <option value="1">1</option>
@@ -58,8 +58,15 @@
             <br/>
 
             <div>
-              <label htmlFor='bench_description'>Description:</label><br/><br/>
+              <label htmlFor='bench_description'>Description (required):</label><br/><br/>
               <textarea ref='description' id='description'></textarea>
+            </div>
+
+            <br/>
+
+            <div>
+              <label htmlFor='bench_imageurl'>Image URL(optional):</label><br/><br/>
+              <textarea ref='url' id='url'></textarea>
             </div>
 
             <br/>

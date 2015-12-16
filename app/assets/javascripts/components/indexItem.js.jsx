@@ -24,7 +24,8 @@
     render: function() {
       return (
         <div onClick={this.show}>
-          <ul>
+          <img className="thumbnail" src={this.props.bench.image_url}></img>
+          <ul className="index-item">
             <li>{this.shortenDescription(this.props.bench.description)}</li>
             <li>Seating: {this.props.bench.seating}</li>
           </ul>
