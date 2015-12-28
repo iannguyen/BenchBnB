@@ -3,7 +3,7 @@
 
   root.Guide = React.createClass({
     render: function() {
-      return(
+      return (
         <div className="guide">
           <h1>How To Use BenchBnB</h1>
           <ul>

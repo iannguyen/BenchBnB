@@ -32,10 +32,18 @@
         <div className="bench-index">
           <img className="large" src={bench.image_url}/>
           <ul className="bench-info">
-            <li><strong>Latitude</strong>: {bench.lat}</li>
-            <li><strong>Longitude</strong>: {bench.lng}</li>
-            <li><strong>Seating Capacity</strong>: {bench.seating}</li>
-            <li><strong>Description</strong>: {bench.description}</li>
+            <li>
+              <strong>Latitude</strong>:
+              {bench.lat}</li>
+            <li>
+              <strong>Longitude</strong>:
+              {bench.lng}</li>
+            <li>
+              <strong>Seating Capacity</strong>:
+              {bench.seating}</li>
+            <li>
+              <strong>Description</strong>:
+              {bench.description}</li>
           </ul>
           <ul className="reviews">
             <h3>Reviews</h3>

@@ -14,10 +14,8 @@
     },
 
     shortenDescription: function(description) {
-      if (description.length < 50) {
-        return description;
-      } else {
-        return description.slice(0,50) + "...";
+      if (description.length < 50) {return description;} else {
+        return description.slice(0, 50) + "...";
       }
     },
 
@@ -27,7 +25,8 @@
           <img className="thumbnail" src={this.props.bench.image_url}></img>
           <ul className="index-item">
             <li>{this.shortenDescription(this.props.bench.description)}</li>
-            <li>Seating: {this.props.bench.seating}</li>
+            <li>Seating:
+              {this.props.bench.seating}</li>
           </ul>
         </div>
       );

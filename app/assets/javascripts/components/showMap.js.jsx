@@ -4,12 +4,12 @@
   root.ShowMap = React.createClass({
 
     getInitialState: function() {
-      return {bench: {}};
+      return {
+        bench: {}
+      };
     },
 
     componentDidMount: function() {
-      // find bench
-      // map currently centers on the same location
       this.generateMap();
     },
 
@@ -27,16 +27,13 @@
     },
 
     renderMarker: function(coordinates) {
-      var marker = new google.maps.Marker({
-        position: coordinates,
-        animation: google.maps.Animation.DROP
-      });
+      var marker = new google.maps.Marker({position: coordinates, animation: google.maps.Animation.DROP});
 
       marker.setMap(this.map);
     },
 
     render: function() {
-      return(
+      return (
         <div className="map" ref="map">
           SHOW MAP SHOULD BE HERE
         </div>
