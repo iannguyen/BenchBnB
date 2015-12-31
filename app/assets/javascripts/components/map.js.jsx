@@ -60,9 +60,9 @@
 
     getMapBounds: function() {
       var bounds = this.map.getBounds();
-      var north = bounds.O.j;
-      var south = bounds.O.O;
-      var east = bounds.j.O;
+      var north = bounds.N.j;
+      var south = bounds.N.N;
+      var east = bounds.j.N;
       var west = bounds.j.j;
       var limits = {
         boundaries: {
