@@ -21,11 +21,11 @@
 
     render: function() {
       return (
-        <div onClick={this.show}>
+        <div className="bench-item" onClick={this.show}>
           <img className="thumbnail" src={this.props.bench.image_url}></img>
           <ul className="index-item">
             <li>{this.shortenDescription(this.props.bench.description)}</li>
-            <li>Seating:
+            <li>Seating:&nbsp;&nbsp;
               {this.props.bench.seating}</li>
           </ul>
         </div>

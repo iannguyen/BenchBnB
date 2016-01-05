@@ -156,7 +156,7 @@ img.thumbnail {
   float: left;
 }
 img.large {
-  width: 300px;
+  width: 45%;
   height: 300px;
   object-fit: cover;
   object-position: center;
@@ -169,20 +169,31 @@ ul.index-item {
   height: 100px;
   width: 65%;
   margin: auto;
-  border-top: 1px solid gold;
-  border-bottom: 1px solid gold;
-}
-ul.index-item:hover {
-  background-color: wheat;
 }
 ul.bench-info {
+  width: 50%;
   position: relative;
-  width: 85%;
-  left: 5%;
   height: 300px;
-  text-align: left;
-  top: 5%;
+  float: right;
+  padding: 0;
 }
 ul.bench-info li {
   width: 90%;
+}
+.bench-item {
+  border-top: 1px solid gold;
+  border-bottom: 1px solid gold;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.bench-item:hover {
+  background-color: wheat;
+}
+ul.reviews {
+  clear: both;
+  margin: auto;
+  width: 95%;
+}
+.bench-index ul {
+  padding: 0;
 }
