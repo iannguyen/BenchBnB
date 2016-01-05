@@ -4,7 +4,7 @@
 [site]: http://bench-bnb.herokuapp.com/
 
 ![screenshot]
-[screenshot]: http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_815/v1450230340/bench_bnb_r812i2.gif
+[screenshot]: http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_750/v1451967741/bench_bnb_pdccks.gif
 
 BenchBnB is a project that integrates the GoogleMaps API. It is inspired by AirBnB.
 
