@@ -76,6 +76,7 @@ div.new-bench {
   width: 50%;
   margin: 3% auto;
   padding: 2%;
+  border: 5px ridge wheat;
 }
 .new-bench-header {
   font-size: 35px;
