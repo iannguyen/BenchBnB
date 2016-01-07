@@ -10,7 +10,8 @@
         lat: this.props.bench.lat,
         lng: this.props.bench.lng
       };
-      this.history.pushState(null, "/benches/" + this.props.bench.id, coords);
+      // this.history.pushState(null, "/benches/" + this.props.bench.id, coords);
+      this.history.pushState(null, "/benches/" + this.props.bench.id);
     },
 
     shortenDescription: function(description) {

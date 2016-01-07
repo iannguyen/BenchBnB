@@ -11,7 +11,7 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
-      render json: @bench
+      render json: @review
     else
       render json: { failures: @review.errors.full_messages }, status: 422
     end

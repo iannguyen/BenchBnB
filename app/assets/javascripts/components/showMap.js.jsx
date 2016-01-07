@@ -10,15 +10,32 @@
     },
 
     componentDidMount: function() {
-      this.generateMap();
+      BenchStore.addChangeListener(this._onChange);
+      var benchId = parseInt(this.props.params.benchId);
+      var bench = BenchStore.find(benchId);
+      if (bench) {
+        this.setState({bench: bench}, this.generateMap(bench.lat, bench.lng));
+      } else {
+        ApiUtil.fetchBenches();
+      }
     },
 
-    generateMap: function() {
+    componentWillUnmount: function() {
+      BenchStore.removeChangeListener(this._onChange);
+    },
+
+    _onChange: function() {
+      var benchId = parseInt(this.props.params.benchId);
+      var bench = BenchStore.find(benchId);
+      this.setState({bench: bench}, this.generateMap(bench.lat, bench.lng));
+    },
+
+    generateMap: function(lat, lng) {
       var map = React.findDOMNode(this.refs.map);
       var mapOptions = {
         center: {
-          lat: parseFloat(this.props.location.query.lat),
-          lng: parseFloat(this.props.location.query.lng)
+          lat: parseFloat(lat),
+          lng: parseFloat(lng)
         },
         zoom: 15
       };
