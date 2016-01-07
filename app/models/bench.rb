@@ -1,6 +1,8 @@
 class Bench < ActiveRecord::Base
   validates :description, :lat, :lng, presence: true
 
+  has_many :reviews
+
   def self.in_bounds?(bounds)
     benches = Bench.all
     return benches if bounds.nil?
