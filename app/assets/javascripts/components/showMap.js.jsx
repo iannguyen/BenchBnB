@@ -2,32 +2,8 @@
   'use strict';
 
   root.ShowMap = React.createClass({
-
-    getInitialState: function() {
-      return {
-        bench: {}
-      };
-    },
-
-    componentDidMount: function() {
-      BenchStore.addChangeListener(this._onChange);
-      var benchId = parseInt(this.props.params.benchId);
-      var bench = BenchStore.find(benchId);
-      if (bench) {
-        this.setState({bench: bench}, this.generateMap(bench.lat, bench.lng));
-      } else {
-        ApiUtil.fetchBenches();
-      }
-    },
-
-    componentWillUnmount: function() {
-      BenchStore.removeChangeListener(this._onChange);
-    },
-
-    _onChange: function() {
-      var benchId = parseInt(this.props.params.benchId);
-      var bench = BenchStore.find(benchId);
-      this.setState({bench: bench}, this.generateMap(bench.lat, bench.lng));
+    componentWillReceiveProps: function(props) {
+      this.generateMap(props.bench.lat, props.bench.lng);
     },
 
     generateMap: function(lat, lng) {

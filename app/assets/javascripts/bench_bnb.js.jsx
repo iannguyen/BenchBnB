@@ -27,7 +27,7 @@
     <Route path="/" component={App}>
       <IndexRoute component={Search}/>
       <Route path='benches/new' component={BenchForm}/>
-      <Route path='benches/:benchId' components={{map: ShowMap, show: BenchShow}}/>
+      <Route path='benches/:benchId' component={ShowPage}/>
     </Route>
   );
 
