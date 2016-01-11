@@ -13,6 +13,12 @@
         actionType: BenchConstants.BENCH_RECEIVED,
         bench: bench
       });
+    },
+    receiveSingleReview: function(review) {
+      AppDispatcher.dispatch({
+        actionType: BenchConstants.REVIEW_RECEIVED,
+        review: review
+      });
     }
   };
 

@@ -34,9 +34,23 @@
         },
         datatype: 'json',
         success: function(response) {
-          debugger;
           ApiActions.receiveSingleBench(response);
           window.location = "/";
+        }
+      });
+    },
+
+    createReview: function(review) {
+      $.ajax({
+        url: 'api/reviews',
+        method: 'post',
+        data: {
+          review: review
+        },
+        datatype: 'json',
+        success: function(response) {
+          debugger;
+          ApiActions.receiveSingleReview(response);
         }
       });
     }

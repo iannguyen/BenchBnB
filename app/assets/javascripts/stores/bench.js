@@ -60,9 +60,12 @@
           _benches.push(payload.bench);
           BenchStore.changed();
           break;
-        case (BenchConstants.FILTERS_RECEIVED):
+        case BenchConstants.FILTERS_RECEIVED:
           resetFilters(payload.filters);
           BenchStore.filterBenches();
+          BenchStore.changed();
+          break;
+        case BenchConstants.REVIEW_RECEIVED:
           BenchStore.changed();
           break;
       }

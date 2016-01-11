@@ -40,6 +40,7 @@
         <div>
           <ShowMap bench={this.state.bench}/>
           <BenchShow bench={this.state.bench}/>
+          <ReviewForm bench={this.state.bench}/>
         </div>
       );
     }
