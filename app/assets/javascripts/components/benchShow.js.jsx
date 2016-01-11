@@ -21,10 +21,6 @@
               <strong>Description</strong>:&nbsp;&nbsp;
               {bench.description}</li>
           </ul>
-          <ul className="reviews">
-            <h3>Reviews</h3>
-            <li>Reviews feature coming soon!</li>
-          </ul>
         </div>
       );
     }

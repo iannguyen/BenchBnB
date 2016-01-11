@@ -10,7 +10,7 @@
 
     componentWillReceiveProps: function(newProps) {
       this.setState({
-        bench_id: this.props.bench.id,
+        bench_id: newProps.bench.id,
         body: ""
       });
     },
@@ -20,7 +20,6 @@
     },
 
     render: function() {
-      debugger;
       return(
         <div className="review-form">
           REVIEW FORM HERE

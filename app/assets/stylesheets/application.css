@@ -154,12 +154,15 @@ img.thumbnail {
   float: left;
 }
 img.large {
-  width: 45%;
-  height: 300px;
+  display: block;
+  width: 95%;
+  height: 60%;
   object-fit: cover;
   object-position: center;
-  float: left;
-  margin: 1%;
+  /*float: left;*/
+  position: relative;
+  margin: auto;
+  margin-top: 1%;
   border: 5px ridge wheat;
 }
 ul.index-item {
@@ -169,10 +172,11 @@ ul.index-item {
   margin: auto;
 }
 ul.bench-info {
-  width: 50%;
+  clear: both;
+  margin: 2%;
+  width: 95;
   position: relative;
-  height: 300px;
-  float: right;
+  /*float: right;*/
   padding: 0;
 }
 ul.bench-info li {
