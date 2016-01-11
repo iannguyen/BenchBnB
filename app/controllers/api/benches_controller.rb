@@ -1,23 +1,24 @@
 class Api::BenchesController < ApplicationController
   def index
-    render json: Bench.in_bounds?(params[:boundaries])
+    @benches = Bench.in_bounds?(params[:boundaries])
+    render :index
   end
 
   def create
-    bench = Bench.new(bench_params)
-    if bench.save
-      render json: bench
+    @bench = Bench.new(bench_params)
+    if @bench.save
+      render json: @bench
     else
-      render json: { failures: bench.errors.full_messages }, status: 422
+      render json: { failures: @bench.errors.full_messages }, status: 422
     end
   end
 
   def show
-    bench = Bench.find(params[:id])
-    if bench
-      render json: bench
+    @bench = Bench.includes(:reviews).find(params[:id])
+    if @bench
+      render json: @bench
     else
-      render json: { failures: bench.errors.full_messages }, status: 422
+      render json: { failures: @bench.errors.full_messages }, status: 422
     end
   end
 

@@ -6,11 +6,6 @@
 
     show: function(e) {
       e.preventDefault();
-      var coords = {
-        lat: this.props.bench.lat,
-        lng: this.props.bench.lng
-      };
-      // this.history.pushState(null, "/benches/" + this.props.bench.id, coords);
       this.history.pushState(null, "/benches/" + this.props.bench.id);
     },
 
