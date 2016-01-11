@@ -1,4 +1,4 @@
-# BenchBnB
+# [BenchBnB][site]
 
 [Live][site]
 [site]: http://bench-bnb.herokuapp.com/
