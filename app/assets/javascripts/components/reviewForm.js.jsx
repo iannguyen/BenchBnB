@@ -22,7 +22,7 @@
     render: function() {
       return(
         <div className="review-form">
-          REVIEW FORM HERE
+          REVIEWS COMING SOON!
         </div>
       );
     }
