@@ -62,6 +62,7 @@
       return(
         <div className="review-section">
           <h1>Reviews</h1>
+          <br/>
           {
             reviews.map(function(review) {
               return <ReviewItem review={review}/>;
