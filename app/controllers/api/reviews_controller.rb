@@ -11,7 +11,8 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
-      render json: @review
+      @bench = Bench.includes(:reviews).find(@review.bench_id)
+      render 'api/benches/show'
     else
       render json: { failures: @review.errors.full_messages }, status: 422
     end

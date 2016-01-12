@@ -199,10 +199,35 @@ ul.reviews {
 .bench-index ul {
   padding: 0;
 }
-.review-form {
+.review-section {
   clear: both;
   margin: auto;
   width: 92%;
   background-color: #fdf6e3;
   border: 5px ridge wheat;
+}
+.review-section * {
+  margin: 1%;
+}
+textarea#body {
+  display: block;
+  background-color: ivory;
+  border: 3px ridge ivory;
+  margin: auto;
+  height: 50%;
+  width: 95%;
+  text-decoration: none;
+}
+button.submit-button {
+  float: right;
+  display: block;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  font-family: cursive;
+  position: relative;
+  right: 1%;
+}
+button.submit-button:hover {
+  text-decoration: underline;
 }

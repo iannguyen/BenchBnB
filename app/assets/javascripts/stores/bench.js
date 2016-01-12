@@ -30,6 +30,14 @@
       }
     },
 
+    update: function(bench) {
+      for (var i = 0; i < _benches.length; i++) {
+        if (_benches[i].id === bench.id) {
+          _benches[i] = bench;
+        }
+      }
+    },
+
     filterByMinMax: function(bench) {
       return bench.seating >= _filters.min && bench.seating <= _filters.max;
     },
@@ -66,6 +74,7 @@
           BenchStore.changed();
           break;
         case BenchConstants.REVIEW_RECEIVED:
+          BenchStore.update(payload.bench);
           BenchStore.changed();
           break;
       }

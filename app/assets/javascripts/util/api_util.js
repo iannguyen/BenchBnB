@@ -49,7 +49,6 @@
         },
         datatype: 'json',
         success: function(response) {
-          debugger;
           ApiActions.receiveSingleReview(response);
         }
       });

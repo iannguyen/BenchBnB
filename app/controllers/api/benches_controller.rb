@@ -16,7 +16,7 @@ class Api::BenchesController < ApplicationController
   def show
     @bench = Bench.includes(:reviews).find(params[:id])
     if @bench
-      render json: @bench
+      render :show
     else
       render json: { failures: @bench.errors.full_messages }, status: 422
     end

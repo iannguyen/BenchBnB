@@ -14,10 +14,10 @@
         bench: bench
       });
     },
-    receiveSingleReview: function(review) {
+    receiveSingleReview: function(bench) {
       AppDispatcher.dispatch({
         actionType: BenchConstants.REVIEW_RECEIVED,
-        review: review
+        bench: bench
       });
     }
   };
