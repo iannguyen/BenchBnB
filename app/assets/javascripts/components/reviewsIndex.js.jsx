@@ -64,7 +64,7 @@
           <h1>Reviews</h1>
           {
             reviews.map(function(review) {
-              return <div>{review}</div>;
+              return <ReviewItem review={review}/>;
             })
           }
           <form onSubmit={this.createReview} className="review-body">

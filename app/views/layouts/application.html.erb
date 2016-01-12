@@ -8,6 +8,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
+        
+        <script type="text/javascript">
+        jQuery(document).ready(function() {
+          $("time.timeago").timeago();
+        });
+        </script>
 </head>
 
 <body>
