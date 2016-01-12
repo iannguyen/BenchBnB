@@ -231,3 +231,14 @@ button.submit-button {
 button.submit-button:hover {
   text-decoration: underline;
 }
+.review-item {
+  border-top: 1px solid wheat;
+  border-bottom: 1px solid wheat;
+}
+.timeago {
+  float: right;
+  color: grey;
+}
+.review-item p {
+  clear: both;
+}
