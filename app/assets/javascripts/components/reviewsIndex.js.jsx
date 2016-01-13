@@ -75,9 +75,9 @@
             <br/>
             <h2>Write Your Review</h2>
             <label htmlFor='username'></label>
-            <textarea type='text' name='username' id='username' ref='username' maxlength="20" valueLink={this.linkState('username')} placeholder="Your name..."></textarea>
+            <textarea type='text' name='username' id='username' ref='username' maxLength="30" valueLink={this.linkState('username')} placeholder="Your name..."></textarea>
             <label htmlFor='body'></label>
-            <textarea valueLink={this.linkState("body")} ref='body' id='body' placeholder="What do you think about this bench?"></textarea>
+            <textarea valueLink={this.linkState("body")} ref='body' id='body' placeholder="What do you think about this bench?" maxLength="400"></textarea>
             <button className="submit-button">Submit Review</button>
             <br/>
             <br/>
