@@ -218,6 +218,11 @@ textarea#body {
   width: 95%;
   text-decoration: none;
 }
+textarea#username {
+  display: block;
+  width: 30%;
+  text-decoration: none;
+}
 button.submit-button {
   float: right;
   display: block;

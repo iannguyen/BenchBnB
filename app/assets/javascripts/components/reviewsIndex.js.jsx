@@ -6,6 +6,7 @@
 
     defaultAttributes: {
       bench_id: "",
+      username: "",
       body: "",
       reviewsList: []
     },
@@ -26,6 +27,7 @@
       if (this.props.bench.id) {
         this.setState({
           bench_id: this.props.bench.id,
+          username: "",
           body: "",
           reviewsList: this.reviewsList(this.props.bench.reviews)
         });
@@ -52,7 +54,8 @@
       e.preventDefault();
       var bench = {
         bench_id: this.state.bench_id,
-        body: e.currentTarget.body.value
+        username: this.state.username,
+        body: this.state.body
       };
       ApiUtil.createReview(bench);
     },
@@ -69,8 +72,12 @@
             })
           }
           <form onSubmit={this.createReview} className="review-body">
-            <label htmlFor='body'><h2>Write Your Review:</h2></label>
-            <textarea valueLink={this.linkState("body")} ref='body' id='body'></textarea>
+            <br/>
+            <h2>Write Your Review</h2>
+            <label htmlFor='username'></label>
+            <textarea type='text' name='username' id='username' ref='username' maxlength="20" valueLink={this.linkState('username')} placeholder="Your name..."></textarea>
+            <label htmlFor='body'></label>
+            <textarea valueLink={this.linkState("body")} ref='body' id='body' placeholder="What do you think about this bench?"></textarea>
             <button className="submit-button">Submit Review</button>
             <br/>
             <br/>
