@@ -1,7 +1,7 @@
 # [BenchBnB][site]
 
 [Live][site]
-[site]: http://bench-bnb.herokuapp.com/
+[site]: http://bench-bnb-in.herokuapp.com/
 
 ![screenshot]
 [screenshot]: http://res.cloudinary.com/dms46o1eu/image/upload/c_scale,w_750/v1451967741/bench_bnb_pdccks.gif
