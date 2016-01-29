@@ -190,6 +190,7 @@ ul.bench-info li {
   margin-right: 2%;
 }
 .bench-item:hover {
+  cursor: pointer;
   background-color: wheat;
 }
 ul.reviews {
