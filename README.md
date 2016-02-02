@@ -21,4 +21,4 @@ BenchBnB is a project that integrates the GoogleMaps API. It is inspired by AirB
 - [x] Apply `filters` for bench seating capacity
 - [x] Add a `Bench` show page and integrate image upload
 - [x] Add `Reviews` for benches
-- [] Add `Rating Stars` for reviews
+- [-] Add `Rating Stars` for reviews
